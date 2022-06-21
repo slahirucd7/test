@@ -4,7 +4,7 @@ type Query {
     "Fetch a specific track, provided a track's ID"
     track(id: ID!): Track
     hello: String
-    hero: Hero
+    hero: [Hero]
 }
 
 type Hero{
