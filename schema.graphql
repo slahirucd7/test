@@ -8,7 +8,7 @@ type Query {
 }
 
 type Mutation {
-    createHero(hero: HeroInput)
+    createHero(hero: HeroInput): Hero
 }
 
 input HeroInput {
