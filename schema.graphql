@@ -8,6 +8,7 @@ type Query {
 }
 
 type Hero{
+    id: ID!
     name: String
     age: Int
 }
