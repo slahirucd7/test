@@ -7,6 +7,15 @@ type Query {
     hero: [Hero]
 }
 
+type Mutation {
+    createHero(hero: HeroInput)
+}
+
+input HeroInput {
+    name: String
+    age: Int
+}
+
 type Hero{
     id: ID
     name: String
