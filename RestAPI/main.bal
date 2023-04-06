@@ -18,10 +18,10 @@ import ballerina/http;
 // }
 
 service http:Service /foo on new http:Listener(9800) {
-    resource function post bar(@http:Payload json payload) returns json {
-        io:println(payload);
-        return payload;
-    }
+    // resource function post bar(@http:Payload json payload) returns json {
+        // io:println(payload);
+        // return payload;
+    // }
 
     resource function get empId/[int id]() returns json {
         // greater than 30 bytes encoding will work 
