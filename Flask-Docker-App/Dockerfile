@@ -10,11 +10,9 @@ RUN addgroup -g 10014 choreo && \
 USER 10014
 
 COPY requirements.txt requirements.txt
-
-# RUN /usr/local/bin/python -m pip install --upgrade pip --user
-RUN ls
-RUN pip3 install -r requirements.txt
-
 COPY . .
+
+RUN . venv/bin/activate
+RUN  pip install -r requirements.txt
 
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
