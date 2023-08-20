@@ -1,13 +1,13 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.9.2-alpine
+FROM python:3.9.2
 RUN /usr/local/bin/python -m pip install --upgrade pip
 
 WORKDIR python-docker
 
-RUN addgroup -g 10014 choreo && \
-    adduser  --disabled-password  --no-create-home --uid 10014 --ingroup choreo choreouser
-USER 10014
+RUN groupadd -g 10005 go \
+&& useradd -m -u 10006 -g go go
+USER 10006
 
 COPY requirements.txt requirements.txt
 COPY . .
