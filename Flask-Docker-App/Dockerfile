@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.9.2
+FROM python:3.9.17
 RUN /usr/local/bin/python -m pip install --upgrade pip
 
 WORKDIR python-docker
