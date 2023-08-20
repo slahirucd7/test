@@ -1,6 +1,7 @@
 # syntax=docker/dockerfile:1
 
 FROM python:3.9.2-alpine
+RUN /usr/local/bin/python -m pip install --upgrade pip
 
 WORKDIR python-docker
 
@@ -10,7 +11,7 @@ USER 10014
 
 COPY requirements.txt requirements.txt
 
-RUN /usr/local/bin/python -m pip install --upgrade pip --user
+# RUN /usr/local/bin/python -m pip install --upgrade pip --user
 RUN ls
 RUN pip3 install -r requirements.txt
 
