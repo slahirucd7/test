@@ -4,7 +4,7 @@ FROM python:3.9.2
 
 WORKDIR python-docker
 
-RUN groupadd -g 2000 go && useradd -m -u 2001 -g go go
+RUN groupadd -g 1006 go && useradd -m -u 1007 -g go go
 USER go
 
 COPY requirements.txt requirements.txt
