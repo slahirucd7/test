@@ -1,10 +1,11 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.9.2
+FROM python:3.9.2-alpine
 
 WORKDIR python-docker
 
-RUN groupadd -g 10006 go && useradd -m -u 10023 -g go go
+RUN addgroup -g 10014 choreo && \
+    adduser  --disabled-password  --no-create-home --uid 10014 --ingroup choreo choreouser
 USER go
 
 COPY requirements.txt requirements.txt
